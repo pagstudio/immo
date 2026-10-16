@@ -74,6 +74,13 @@
     .service-title { font-family: 'Playfair Display', 'DM Serif Display', serif; font-size: 22px; font-weight: 600; color: var(--ink); margin-bottom: 10px; line-height: 1.2; }
     .service-desc { font-size: 13px; line-height: 1.75; color: var(--ink-muted); }
 
+    #realisations { background: rgba(250,248,243,0.93); }
+    .real-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center; }
+    .real-video { background: var(--white); padding: 14px; border: 1px solid rgba(184,150,62,0.2); box-shadow: 0 20px 60px rgba(26,23,20,0.08); }
+    .real-video video { width: 100%; aspect-ratio: 9/16; display: block; background: var(--ink); object-fit: cover; }
+    .real-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .real-tag { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(184,150,62,0.3); padding: 7px 14px; }
+    @media (max-width: 960px) { .real-inner { grid-template-columns: 1fr; gap: 40px; } .real-video { max-width: 360px; margin: 0 auto; } }
     #process { background: rgba(250,248,243,0.93); backdrop-filter: blur(2px); }
     .process-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .process-step { display: flex; gap: 26px; padding: 26px 0; border-bottom: 1px solid rgba(26,23,20,0.07); }
@@ -192,6 +199,7 @@
     <div class="nav-logo">PAG <span>Studio</span></div>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
       <li><a href="#process">Méthode</a></li>
       <li><a href="#ia">IA</a></li>
       <li><a href="#packs">Tarifs</a></li>
@@ -233,6 +241,24 @@
           <div class="service-title">Montage · Post-production</div>
           <p class="service-desc">Montage sous DaVinci Resolve, étalonnage colorimétrique, sound design et habillage graphique. Rendu horizontal ou vertical selon votre usage.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="realisations">
+    <div class="real-inner">
+      <div class="reveal">
+        <div class="section-label">Réalisations</div>
+        <h2 class="section-title">Maison familiale<br><em>120 m²</em></h2>
+        <p class="section-desc">Présentation complète d'une maison familiale au cœur de la verdure : extérieur, pièces de vie, cuisine ouverte et chambres. Une visite fluide en format vertical, pensée pour les réseaux sociaux.</p>
+        <div class="real-tags">
+          <span class="real-tag">Format 9:16</span>
+          <span class="real-tag">Tournage + montage</span>
+          <span class="real-tag">Textes animés</span>
+        </div>
+      </div>
+      <div class="real-video reveal d1">
+        <video src="maison_familiale.mp4" poster="maison_familiale_poster.jpg" controls playsinline preload="metadata"></video>
       </div>
     </div>
   </section>
